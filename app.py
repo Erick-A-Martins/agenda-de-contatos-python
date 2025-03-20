@@ -1,4 +1,3 @@
-import streamlit as st
 import os
 
 def add_contact (list):
@@ -66,10 +65,12 @@ def favorite_contact(list, index):
     
     if list[adjusted_index]["favorite"] == False: 
         list[adjusted_index]["favorite"] = True
-        print(f"Contato {index} marcado como favorito!")
+        contact_name = list[adjusted_index]["nome"]
+        print(f"Contato {contact_name} marcado como favorito!")
     else:
         list[adjusted_index]["favorite"] = False
-        print(f"Contato {index} desfavoritado!")
+        contact_name = list[adjusted_index]["nome"]
+        print(f"Contato {contact_name} desfavoritado!")
 
     return
 
